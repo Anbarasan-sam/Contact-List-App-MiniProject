@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Contact List App Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="url" value="https://thinking-tester-contact-list.herokuapp.com/"/>
+  <listeners>
+    <listener class-name="utils.ListenerClass"/>
+  </listeners>
+  <test thread-count="5" name="ChromeTest(failed)">
+    <parameter name="browser" value="Chrome"/>
+    <classes>
+      <class name="test.ContactsEditingTest">
+        <methods>
+          <include name="launchBrowser"/>
+          <include name="testFieldChangesDontAffectOtherFields"/>
+          <include name="setup"/>
+          <include name="close"/>
+          <include name="verifySaveWithEmptyFields"/>
+          <include name="testEditContactDetails"/>
+        </methods>
+      </class> <!-- test.ContactsEditingTest -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+</suite> <!-- Failed suite [Contact List App Suite] -->
